@@ -17,7 +17,7 @@ import sx.blah.discord.util.MessageBuilder;
 
 public class AnnotationListener 
 {
-	static final String folder = "words\\";
+	static final String folder = System.getProperty("user.dir") + "/words/";
 	static Random rnd = new Random();
 	static final int PatternCount = Pattern.values().length;
 	
@@ -35,6 +35,7 @@ public class AnnotationListener
 		{
 			String newName = GetLolName(Pattern.values()[rnd.nextInt(Pattern.values().length)]);
 			SendNewNameMessage(message.getChannel(), newName);
+			System.out.println(event.getGuild().getName() + " has been renamed to " + newName + " (" + event.getGuild().getStringID() + ")");
 			event.getGuild().changeName(newName);
 		}
     }
