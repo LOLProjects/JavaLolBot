@@ -1,0 +1,1 @@
+To give the token you must create a file called "token.txt" here and put the token in it, and only the token
