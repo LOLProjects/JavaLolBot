@@ -155,3 +155,5 @@ lynx
 lyocell
 lyre
 lyric
+legends
+lamborghini
